@@ -93,6 +93,8 @@ resource "aws_lb_listener" "https" {
       status_code  = "404"
     }
   }
+
+  depends_on = [aws_acm_certificate.sample]
 }
 
 resource "aws_lb_target_group" "sample" {
