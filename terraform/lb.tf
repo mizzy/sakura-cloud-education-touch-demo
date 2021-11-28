@@ -94,7 +94,10 @@ resource "aws_lb_listener" "https" {
     }
   }
 
-  depends_on = [aws_acm_certificate.sample]
+  depends_on = [
+    aws_acm_certificate_validation.sample,
+    aws_acm_certificate.sample,
+  ]
 }
 
 resource "aws_lb_target_group" "sample" {
