@@ -96,7 +96,6 @@ resource "aws_lb_listener" "https" {
 
   depends_on = [
     aws_acm_certificate_validation.sample,
-    aws_acm_certificate.sample,
   ]
 }
 
