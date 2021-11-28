@@ -50,4 +50,4 @@ jobs:
 
       - name: tfcmt apply
         if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-        run: tfcmt apply -- terraform apply
+        run: tfcmt apply -- terraform apply -auto-approve
