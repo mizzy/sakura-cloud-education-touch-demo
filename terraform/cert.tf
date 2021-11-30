@@ -1,6 +1,6 @@
 resource "aws_acm_certificate" "sample" {
   domain_name               = aws_route53_record.sample.name
-  subject_alternative_names = []
+  subject_alternative_names = ["*.${aws_route53_record.sample.name}"]
   validation_method         = "DNS"
 
   lifecycle {
